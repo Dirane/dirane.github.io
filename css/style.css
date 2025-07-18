@@ -1269,3 +1269,1020 @@ footer .credits a {
     bottom: 15px;
   }
 }
+
+/*======================================
+//--//-->   EXPERIENCE TIMELINE STYLES
+======================================*/
+
+.timeline-centered {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-centered:before, .timeline-centered:after {
+  content: " ";
+  display: table;
+}
+
+.timeline-centered:after {
+  clear: both;
+}
+
+.timeline-centered:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 4px;
+  background: #008080;
+  top: 20px;
+  bottom: 20px;
+  margin-left: 50px;
+}
+
+.timeline-entry {
+  position: relative;
+  width: 45%;
+  float: right;
+  margin-top: 5px;
+  margin-left: 70px;
+  margin-bottom: 30px;
+  clear: both;
+}
+
+.timeline-entry:nth-child(even) {
+  float: left;
+  text-align: right;
+  margin-left: 0;
+  margin-right: 70px;
+}
+
+.timeline-entry-inner {
+  position: relative;
+  background-color: #fff;
+  color: #737881;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-top: 10px;
+}
+
+.timeline-entry-inner:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 30px;
+  left: -15px;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #fff;
+}
+
+.timeline-entry:nth-child(even) .timeline-entry-inner:after {
+  left: auto;
+  right: -15px;
+  border-left: 15px solid #fff;
+  border-right: 0;
+}
+
+.timeline-icon {
+  position: absolute;
+  background: #008080;
+  width: 60px;
+  height: 60px;
+  top: 10px;
+  left: -50px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 0 0 5px #f5f5f5;
+  z-index: 10;
+}
+
+.timeline-entry:nth-child(even) .timeline-icon {
+  left: auto;
+  right: -50px;
+}
+
+.timeline-icon i {
+  color: #fff;
+  font-size: 16px;
+  line-height: 60px;
+}
+
+.timeline-icon.color-1 {
+  background: #008080;
+}
+
+.timeline-icon.color-2 {
+  background: #e74c3c;
+}
+
+.timeline-icon.color-3 {
+  background: #f39c12;
+}
+
+.timeline-icon.color-4 {
+  background: #9b59b6;
+}
+
+.work-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #008080;
+  margin-bottom: 0.5rem;
+}
+
+.work-company {
+  font-size: 1.2rem;
+  color: #4e4e4e;
+  margin-bottom: 0.5rem;
+}
+
+.work-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.work-description {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.work-description li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 0.5rem;
+  color: #4e4e4e;
+}
+
+.work-description li:before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #008080;
+  font-size: 0.8rem;
+  top: 0.1rem;
+}
+
+/*======================================
+//--//-->   EDUCATION STYLES
+======================================*/
+
+.education-item, .certification-item {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.education-item:hover, .certification-item:hover {
+  transform: translateY(-5px);
+}
+
+.education-icon, .certification-icon {
+  background: #008080;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.education-icon i, .certification-icon i {
+  color: #fff;
+  font-size: 24px;
+}
+
+.education-title, .certification-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #008080;
+  margin-bottom: 0.5rem;
+}
+
+.education-institution, .certification-date {
+  font-size: 1.1rem;
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
+}
+
+.education-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.education-description, .certification-description {
+  color: #4e4e4e;
+  line-height: 1.6;
+}
+
+/*======================================
+//--//-->   RESPONSIVE TIMELINE
+======================================*/
+
+@media (max-width: 992px) {
+  .timeline-centered:before {
+    left: 50px;
+    margin-left: -2px;
+  }
+
+  .timeline-entry {
+    width: calc(100% - 80px);
+    float: none;
+    margin-left: 80px;
+    margin-right: 0;
+  }
+
+  .timeline-entry:nth-child(even) {
+    float: none;
+    text-align: left;
+    margin-left: 80px;
+    margin-right: 0;
+  }
+
+  .timeline-icon {
+    left: 20px;
+  }
+
+  .timeline-entry:nth-child(even) .timeline-icon {
+    left: 20px;
+    right: auto;
+  }
+
+  .timeline-entry-inner:after {
+    left: -15px;
+    border-right: 15px solid #fff;
+    border-left: 0;
+  }
+
+  .timeline-entry:nth-child(even) .timeline-entry-inner:after {
+    left: -15px;
+    border-right: 15px solid #fff;
+    border-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-centered:before {
+    left: 20px;
+  }
+
+  .timeline-entry {
+    margin-left: 60px;
+    width: calc(100% - 70px);
+    margin-bottom: 3rem;
+  }
+
+  .timeline-entry:nth-child(even) {
+    margin-left: 60px;
+  }
+
+  .timeline-icon {
+    left: -10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .timeline-entry:nth-child(even) .timeline-icon {
+    left: -10px;
+  }
+
+  .timeline-icon i {
+    line-height: 40px;
+    font-size: 14px;
+  }
+
+  .timeline-entry-inner {
+    padding: 1.5rem;
+    margin-top: 0;
+    margin-left: 15px;
+    clear: both;
+  }
+  
+  /* Additional fixes to prevent overlap */
+  .timeline-entry-inner:after {
+    left: -15px;
+    top: 15px;
+  }
+  
+  .timeline-entry:nth-child(even) .timeline-entry-inner:after {
+    left: -15px;
+    right: auto;
+  }
+
+  .work-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .work-company {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .work-date {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .work-description {
+    margin-top: 1rem;
+  }
+
+  .work-description li {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0.7rem;
+  }
+
+  .education-item, .certification-item {
+    padding: 1.5rem;
+  }
+
+  .education-title, .certification-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  .timeline-centered:before {
+    left: 15px;
+  }
+
+  .timeline-entry {
+    margin-left: 45px;
+    width: calc(100% - 55px);
+  }
+
+  .timeline-entry:nth-child(even) {
+    margin-left: 45px;
+  }
+
+  .timeline-icon {
+    left: -15px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .timeline-entry:nth-child(even) .timeline-icon {
+    left: -15px;
+  }
+
+  .timeline-icon i {
+    line-height: 35px;
+    font-size: 12px;
+  }
+
+  .timeline-entry-inner {
+    padding: 1rem;
+    margin-left: 20px;
+  }
+
+  .work-title {
+    font-size: 1.1rem;
+  }
+
+  .work-company {
+    font-size: 0.9rem;
+  }
+
+  .work-date {
+    font-size: 0.8rem;
+  }
+
+  .work-description li {
+    font-size: 0.85rem;
+  }
+}
+
+/*======================================
+//--//-->   ACHIEVEMENTS STYLES
+======================================*/
+
+.achievement-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  height: 100%;
+}
+
+.achievement-box:hover {
+  transform: translateY(-5px);
+}
+
+.achievement-icon {
+  background: #008080;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.achievement-icon i {
+  color: #fff;
+  font-size: 28px;
+}
+
+.achievement-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #008080;
+  margin-bottom: 1rem;
+}
+
+.achievement-description {
+  color: #4e4e4e;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .achievement-box {
+    padding: 1.5rem;
+  }
+  
+  .achievement-title {
+    font-size: 1.1rem;
+  }
+  
+  .achievement-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .achievement-icon i {
+    font-size: 24px;
+  }
+}
+
+/*======================================
+//--//-->   PORTFOLIO ENHANCEMENTS
+======================================*/
+
+.w-description {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #eee;
+}
+
+.w-description p {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.work-box:hover .w-description p {
+  color: #4e4e4e;
+}
+
+/*======================================
+//--//-->   IT CONSULTANT HERO STYLING
+======================================*/
+
+.intro-consultant-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #ffffff;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/*======================================
+//--//-->   IT SERVICES SECTION STYLING
+======================================*/
+
+.services-mf {
+  background-color: #f8f9fa;
+}
+
+.service-box {
+  padding: 2rem 1rem;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  border-top: 3px solid #008080;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.service-ico {
+  margin-bottom: 1rem;
+}
+
+.service-ico .ico-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #008080;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,128,128,0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.service-box:hover .service-ico .ico-circle {
+  background-color: #006666;
+  transform: scale(1.1);
+}
+
+.service-ico .ico-circle i {
+  font-size: 36px;
+  color: #fff;
+}
+
+.service-content .s-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #008080;
+  margin-bottom: 1rem;
+}
+
+.service-content .s-description {
+  color: #4e4e4e;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.service-box:hover .service-content .s-title {
+  color: #006666;
+}
+
+/*======================================
+//--//-->   RESPONSIVE SERVICES
+======================================*/
+
+@media (max-width: 768px) {
+  .intro-consultant-title {
+    font-size: 1.8rem;
+  }
+  
+  .service-box {
+    padding: 1.5rem 1rem;
+  }
+  
+  .service-ico .ico-circle {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .service-ico .ico-circle i {
+    font-size: 28px;
+  }
+  
+  .service-content .s-title {
+    font-size: 1.2rem;
+  }
+}
+
+/*======================================
+//--//-->   CONSISTENT COLOR SCHEME
+======================================*/
+
+/* Ensure consistent teal color throughout the site */
+.color-a,
+.title-a,
+.s-title,
+.work-title,
+.education-title,
+.certification-title,
+.achievement-title,
+.intro-consultant-title,
+.about-info .title-s {
+  color: #008080 !important;
+}
+
+/* Consistent hover effects */
+.nav-link:hover,
+.service-content .s-title:hover,
+.work-title:hover,
+.education-title:hover,
+.certification-title:hover,
+.achievement-title:hover {
+  color: #006666 !important;
+}
+
+/* Consistent background colors */
+.timeline-icon,
+.education-icon,
+.certification-icon,
+.achievement-icon,
+.service-ico .ico-circle,
+.btn-primary,
+.progress-bar {
+  background-color: #008080 !important;
+}
+
+/* Consistent border colors */
+.service-box,
+.intro-consultant-title {
+  border-color: #008080 !important;
+}
+
+/* Consistent timeline colors */
+.timeline-centered:before {
+  background: #008080 !important;
+}
+
+/* Ensure white text on teal backgrounds */
+.timeline-icon i,
+.education-icon i,
+.certification-icon i,
+.achievement-icon i,
+.service-ico .ico-circle i,
+.btn-primary {
+  color: #ffffff !important;
+}
+
+/* Consistent link colors */
+a {
+  color: #008080 !important;
+}
+
+a:hover {
+  color: #006666 !important;
+}
+
+/*======================================
+//--//-->   ADDITIONAL CLEAN DESIGN FIXES
+======================================*/
+
+/* Ensure proper spacing for sections */
+.sect-pt4 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Clean up section backgrounds */
+.services-mf,
+.achievements-mf {
+  background-color: #f8f9fa;
+}
+
+.experience-mf,
+.education-mf,
+.portfolio-mf {
+  background-color: #ffffff;
+}
+
+/* Improve timeline text readability */
+.timeline-entry-inner {
+  line-height: 1.6;
+}
+
+.work-description li {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+/* Ensure consistent section spacing */
+.title-box {
+  margin-bottom: 3rem;
+}
+
+/* Fix any icon overlapping issues */
+.timeline-icon {
+  z-index: 10;
+}
+
+/* Ensure icons don't overlap with text */
+.timeline-entry-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* Clean timeline layout */
+.timeline-entry {
+  margin-bottom: 2rem;
+}
+
+/* Improve work description formatting */
+.work-description {
+  margin-top: 1rem;
+}
+
+.work-description li {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/*======================================
+//--//-->   ICON FIXES AND IMPROVEMENTS
+======================================*/
+
+/* Fix all icon display issues */
+.timeline-icon i,
+.education-icon i,
+.certification-icon i,
+.achievement-icon i,
+.service-ico .ico-circle i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Ensure proper icon sizing */
+.timeline-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.education-icon,
+.certification-icon,
+.achievement-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-ico .ico-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fix icon alignment in timeline */
+.timeline-icon i {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+/* Fix achievement icons */
+.achievement-icon i {
+  line-height: 1;
+}
+
+/* Fix service icons */
+.service-ico .ico-circle i {
+  line-height: 1;
+}
+
+/* Improve mobile spacing */
+@media (max-width: 768px) {
+  .sect-pt4 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .title-box {
+    margin-bottom: 2rem;
+  }
+  
+  /* Fix mobile icon display issues */
+  .service-ico .ico-circle {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .service-ico .ico-circle i {
+    font-size: 24px;
+  }
+  
+  .achievement-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .achievement-icon i {
+    font-size: 20px;
+  }
+  
+  .education-icon,
+  .certification-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .education-icon i,
+  .certification-icon i {
+    font-size: 20px;
+  }
+  
+  /* Ensure proper spacing on mobile */
+  .service-box {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+  }
+  
+  .achievement-box {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+  }
+  
+  .education-item,
+  .certification-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+  }
+  
+  /* Additional mobile fixes */
+  .intro-consultant-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .intro-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  
+  .btn-modern-primary,
+  .btn-modern-secondary {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .btn-modern-primary:last-child,
+  .btn-modern-secondary:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/*======================================
+//--//-->   SCHEDULE CALL SECTION
+======================================*/
+
+.schedule-call-section {
+  background-color: #f8f9fa;
+  padding: 4rem 0;
+}
+
+.schedule-call-box {
+  background: linear-gradient(135deg, #2c5c5c 0%, #1a4040 100%);
+  border-radius: 20px;
+  padding: 4rem 3rem;
+  text-align: center;
+  border: 2px solid #3a7070;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-icon {
+  margin-bottom: 2rem;
+}
+
+.schedule-icon i {
+  font-size: 4rem;
+  color: #4db8b8;
+  background: rgba(77, 184, 184, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 2px solid #4db8b8;
+}
+
+.schedule-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.schedule-description {
+  font-size: 1.2rem;
+  color: #b8d4d4;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.btn-schedule {
+  background: transparent;
+  border: 2px solid #4db8b8;
+  color: #4db8b8;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-schedule:hover {
+  background: #4db8b8;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(77, 184, 184, 0.3);
+  text-decoration: none;
+}
+
+/*======================================
+//--//-->   RESPONSIVE SCHEDULE SECTION
+======================================*/
+
+@media (max-width: 768px) {
+  .schedule-call-box {
+    padding: 2.5rem 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .schedule-icon i {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+  
+  .schedule-title {
+    font-size: 2rem;
+  }
+  
+  .schedule-description {
+    font-size: 1rem;
+  }
+  
+  .btn-schedule {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+/*======================================
+//--//-->   MODERN BUTTON STYLES
+======================================*/
+
+.btn-modern-primary {
+  background: linear-gradient(135deg, #008080 0%, #006666 100%);
+  border: none;
+  border-radius: 50px;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 128, 128, 0.3);
+}
+
+.btn-modern-primary:hover {
+  background: linear-gradient(135deg, #006666 0%, #004d4d 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 128, 128, 0.4);
+  color: #ffffff;
+}
+
+.btn-modern-secondary {
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.btn-modern-secondary:hover {
+  background: #ffffff;
+  color: #008080;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.btn-modern-primary i,
+.btn-modern-secondary i {
+  font-size: 1.1em;
+}
+
+/* Responsive button styles */
+@media (max-width: 768px) {
+  .btn-modern-primary,
+  .btn-modern-secondary {
+    padding: 0.75rem 2rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+}
