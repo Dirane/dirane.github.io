@@ -6,6 +6,123 @@
 */
 
 /*======================================
+//--//-->   RESPONSIVE FIXES
+======================================*/
+
+/* Prevent horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Ensure all elements stay within viewport */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Fix image responsiveness */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Fix container overflow */
+.container, .container-fluid {
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Prevent text overflow */
+p, h1, h2, h3, h4, h5, h6, span, div {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Fix Bootstrap row negative margins on mobile */
+@media (max-width: 767px) {
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+  .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+  .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6,
+  .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12,
+  .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
+  .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  
+  /* Navbar mobile fixes */
+  .navbar-b {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  /* Section title mobile fixes */
+  .title-a {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+  
+  .title-left {
+    font-size: 1.5rem;
+  }
+  
+  /* Intro section mobile fixes */
+  .intro-content {
+    padding: 0 20px;
+  }
+  
+  /* Fix button spacing on mobile */
+  .intro .btn {
+    margin: 0.5rem 0;
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Portfolio work boxes mobile fixes */
+  .work-content {
+    padding: 1.5rem 2% 1rem 3%;
+  }
+  
+  .work-content .w-more {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .w-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  /* Contact section mobile fixes */
+  .contact-mf .title-box-2 {
+    margin-bottom: 2rem;
+  }
+  
+  .socials .ico-circle {
+    margin: 0 10px 10px 0;
+  }
+}
+
+/*======================================
 //--//-->   STYLES GENERALES
 ======================================*/
 
@@ -1532,27 +1649,126 @@ footer .credits a {
 
 @media (max-width: 768px) {
   .timeline-centered:before {
-    left: 20px;
+    left: 35px;
   }
 
   .timeline-entry {
-    margin-left: 60px;
-    width: calc(100% - 70px);
+    margin-left: 120px;
+    width: calc(100% - 130px);
+    margin-bottom: 4rem;
+  }
+
+  .timeline-entry:nth-child(even) {
+    margin-left: 120px;
+  }
+
+  .timeline-icon {
+    left: -35px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .timeline-entry:nth-child(even) .timeline-icon {
+    left: -35px;
+  }
+
+  .timeline-icon i {
+    line-height: 50px;
+    font-size: 16px;
+  }
+
+  .timeline-entry-inner {
+    padding: 2rem;
+    margin-top: 0;
+    margin-left: 0;
+    clear: both;
+    min-height: 200px;
+  }
+  
+  /* Additional fixes to prevent overlap */
+  .timeline-entry-inner:after {
+    left: -15px;
+    top: 25px;
+  }
+  
+  .timeline-entry:nth-child(even) .timeline-entry-inner:after {
+    left: -15px;
+    right: auto;
+  }
+
+  .work-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+    padding-left: 10px;
+  }
+
+  .work-company {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+    padding-left: 10px;
+  }
+
+  .work-date {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    padding-left: 10px;
+  }
+
+  .work-description {
+    margin-top: 1.5rem;
+  }
+
+  .work-description li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    padding-right: 10px;
+  }
+
+  .education-item, .certification-item {
+    padding: 2rem 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .education-title, .certification-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  /* Fix horizontal scrolling on very small screens */
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  /* Timeline fixes for extra small screens */
+  .timeline-centered:before {
+    left: 30px;
+  }
+
+  .timeline-entry {
+    margin-left: 100px;
+    width: calc(100% - 110px);
     margin-bottom: 3rem;
   }
 
   .timeline-entry:nth-child(even) {
-    margin-left: 60px;
+    margin-left: 100px;
   }
 
   .timeline-icon {
-    left: -10px;
+    left: -30px;
     width: 40px;
     height: 40px;
   }
 
   .timeline-entry:nth-child(even) .timeline-icon {
-    left: -10px;
+    left: -30px;
   }
 
   .timeline-icon i {
@@ -1562,105 +1778,114 @@ footer .credits a {
 
   .timeline-entry-inner {
     padding: 1.5rem;
-    margin-top: 0;
-    margin-left: 15px;
-    clear: both;
-  }
-  
-  /* Additional fixes to prevent overlap */
-  .timeline-entry-inner:after {
-    left: -15px;
-    top: 15px;
-  }
-  
-  .timeline-entry:nth-child(even) .timeline-entry-inner:after {
-    left: -15px;
-    right: auto;
-  }
-
-  .work-title {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .work-company {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .work-date {
-    font-size: 0.85rem;
-    margin-bottom: 1rem;
-  }
-
-  .work-description {
-    margin-top: 1rem;
-  }
-
-  .work-description li {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    margin-bottom: 0.7rem;
-  }
-
-  .education-item, .certification-item {
-    padding: 1.5rem;
-  }
-
-  .education-title, .certification-title {
-    font-size: 1.2rem;
-  }
-}
-
-/* Extra small mobile devices */
-@media (max-width: 480px) {
-  .timeline-centered:before {
-    left: 15px;
-  }
-
-  .timeline-entry {
-    margin-left: 45px;
-    width: calc(100% - 55px);
-  }
-
-  .timeline-entry:nth-child(even) {
-    margin-left: 45px;
-  }
-
-  .timeline-icon {
-    left: -15px;
-    width: 35px;
-    height: 35px;
-  }
-
-  .timeline-entry:nth-child(even) .timeline-icon {
-    left: -15px;
-  }
-
-  .timeline-icon i {
-    line-height: 35px;
-    font-size: 12px;
-  }
-
-  .timeline-entry-inner {
-    padding: 1rem;
-    margin-left: 20px;
+    margin-left: 0;
+    min-height: 180px;
   }
 
   .work-title {
     font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    padding-left: 10px;
   }
 
   .work-company {
     font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    padding-left: 10px;
   }
 
   .work-date {
     font-size: 0.8rem;
+    margin-bottom: 1rem;
+    padding-left: 10px;
   }
 
   .work-description li {
     font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+  
+  /* Service and achievement boxes for extra small screens */
+  .service-box {
+    padding: 1.5rem 0.5rem;
+    margin: 0 5px 2rem 5px;
+  }
+  
+  .service-ico .ico-circle {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .service-ico .ico-circle i {
+    font-size: 24px;
+  }
+  
+  .service-content .s-title {
+    font-size: 1.1rem;
+  }
+  
+  .service-content .s-description {
+    font-size: 0.9rem;
+    padding: 0;
+  }
+  
+  .achievement-box {
+    padding: 1.5rem 0.5rem;
+    margin: 0 5px 2rem 5px;
+  }
+  
+  .achievement-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .achievement-icon i {
+    font-size: 20px;
+  }
+  
+  .achievement-title {
+    font-size: 1.1rem;
+  }
+  
+  .achievement-description {
+    font-size: 0.85rem;
+    padding: 0;
+  }
+  
+  /* About section fixes */
+  .about-mf .about-info p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Navigation fixes */
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+  
+  /* Section title fixes for extra small screens */
+  .title-a {
+    font-size: 1.6rem !important;
+    line-height: 1.1;
+  }
+  
+  .title-left {
+    font-size: 1.3rem;
+  }
+  
+  /* Intro section fixes */
+  .intro .intro-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .intro .intro-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .intro-consultant-title {
+    font-size: 1.4rem;
   }
 }
 
@@ -2109,6 +2334,72 @@ a:hover {
     padding: 1.5rem;
   }
   
+  /* Service box mobile fixes */
+  .service-box {
+    padding: 2rem 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  .service-ico {
+    margin-bottom: 2rem;
+  }
+  
+  .service-ico .ico-circle {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 2rem;
+  }
+  
+  .service-ico .ico-circle i {
+    font-size: 30px;
+  }
+  
+  .service-content {
+    padding: 0 1rem;
+  }
+  
+  .service-content .s-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+  }
+  
+  .service-content .s-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0 0.5rem;
+  }
+  
+  /* Achievement box mobile fixes */
+  .achievement-box {
+    padding: 2rem 1rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+  
+  .achievement-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+  }
+  
+  .achievement-icon i {
+    font-size: 24px;
+  }
+  
+  .achievement-title {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.3;
+  }
+  
+  .achievement-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0 0.5rem;
+  }
+  
   /* Additional mobile fixes */
   .intro-consultant-title {
     font-size: 1.6rem;
@@ -2131,6 +2422,31 @@ a:hover {
   .btn-modern-primary:last-child,
   .btn-modern-secondary:last-child {
     margin-bottom: 0;
+  }
+  
+  /* Fix about section mobile spacing */
+  .about-mf .about-img {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .about-mf .about-info p {
+    margin-bottom: 0.8rem;
+    word-break: break-word;
+  }
+  
+  /* Fix contact section mobile spacing */
+  .contact-mf .more-info {
+    margin-top: 2rem;
+  }
+  
+  .contact-mf .list-ico {
+    padding-left: 0;
+  }
+  
+  .contact-mf .list-ico li {
+    margin-bottom: 1rem;
+    word-break: break-word;
   }
 }
 
